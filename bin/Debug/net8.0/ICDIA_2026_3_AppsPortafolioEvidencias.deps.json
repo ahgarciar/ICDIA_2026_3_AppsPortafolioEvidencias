@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "ICDIA_2026_3_AppsPortafolioEvidencias/1.0.0": {
+        "runtime": {
+          "ICDIA_2026_3_AppsPortafolioEvidencias.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ICDIA_2026_3_AppsPortafolioEvidencias/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
