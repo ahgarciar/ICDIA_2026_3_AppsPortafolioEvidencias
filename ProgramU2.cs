@@ -15,24 +15,6 @@ public class ProgramU2
     public static void Main(string[] args)
     {
         Console.WriteLine("Unidad 2. Programas iniciado...\n");
-
-        #region Introduccion
-        //UsoClasePersona1 programa;
-        //programa = new UsoClasePersona1();
-
-        //new UsoClasePersona2();
-
-        //new UsoClasePersona3();
-
-        //new P4_UsoMascota1();
-
-        //new P6_UsoPoligonos1();
-
-       //new P7_UsoCarros();
-        
-     //   new R03_CarroManual();
-
-     #endregion
     
         int tipoPrograma;
         do{
@@ -78,8 +60,8 @@ public static void MenuProgramasApuntes()
         do{
         Console.WriteLine("Que apunte desea ejecutar?");
         Console.WriteLine("1: Lista Genéricas");
-        Console.WriteLine("2: ");
-        Console.WriteLine("3: ");
+        Console.WriteLine("2: Clase Alumno");
+        Console.WriteLine("3: Clase Dataset");
         Console.WriteLine("4: ");
         Console.WriteLine("5: ");
         Console.WriteLine("100: Salir");
@@ -102,10 +84,15 @@ public static void MenuProgramasApuntes()
                     Console.WriteLine("_Ejecución terminada!\n");
                 break;
                 case 2:
-                    Console.WriteLine("Ejecución del apunte 2");
+                    Console.WriteLine("Ejecución del apunte 2: Clase Alumno");
+                    P00_Ejectures.Ejecuta_P02_Alumo();
                 break;
                 case 3:
-                    Console.WriteLine("Ejecución del apunte 3");
+                    Console.WriteLine("Ejecución del apunte 3: Clase Dataset");
+                    P00_Ejectures.Ejecuta_P03_Dataset();
+                break;
+                case 4:
+
                 break;
 
 

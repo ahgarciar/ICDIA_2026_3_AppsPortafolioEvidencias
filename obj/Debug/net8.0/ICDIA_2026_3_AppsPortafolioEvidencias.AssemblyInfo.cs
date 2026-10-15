@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ICDIA_2026_3_AppsPortafolioEvidencias")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a77a9a39e0688d675478a59720a46ed2cb1bcf8b")]
 [assembly: System.Reflection.AssemblyProductAttribute("ICDIA_2026_3_AppsPortafolioEvidencias")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ICDIA_2026_3_AppsPortafolioEvidencias")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
