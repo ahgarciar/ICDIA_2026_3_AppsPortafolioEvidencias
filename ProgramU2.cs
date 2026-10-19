@@ -61,9 +61,10 @@ public static void MenuProgramasApuntes()
         Console.WriteLine("Que apunte desea ejecutar?");
         Console.WriteLine("1: Lista Genéricas");
         Console.WriteLine("2: Clase Alumno");
-        Console.WriteLine("3: Clase Dataset");
-        Console.WriteLine("4: ");
-        Console.WriteLine("5: ");
+        Console.WriteLine("3: Clase Alumno - Calcular Promedio");
+        Console.WriteLine("4: Clase Dataset");
+        Console.WriteLine("5: Try-Catch 1");
+        Console.WriteLine("6: Try-Catch 2 (con Message)");
         Console.WriteLine("100: Salir");
         bool esValida = int.TryParse(Console.ReadLine(), out apunte);
             if (!esValida)
@@ -88,13 +89,21 @@ public static void MenuProgramasApuntes()
                     P00_Ejectures.Ejecuta_P02_Alumo();
                 break;
                 case 3:
-                    Console.WriteLine("Ejecución del apunte 3: Clase Dataset");
-                    P00_Ejectures.Ejecuta_P03_Dataset();
+                    Console.WriteLine("Ejecución del apunte 3: Clase Alumno - Calcular Promedio");
+                    P00_Ejectures.Ejecutar_P02_Alumo_CalcularPromedio();
                 break;
                 case 4:
-
+                    Console.WriteLine("Ejecución del apunte 4: Clase Dataset");
+                    P00_Ejectures.Ejecuta_P03_Dataset();
                 break;
-
+                case 5:
+                    Console.WriteLine("Ejecución del apunte 5: Try-Catch 1");
+                    P00_Ejectures.Ejecuta_TryCatch1();
+                break;
+                case 6:
+                    Console.WriteLine("Ejecución del apunte 6: Try-Catch 2 (con Message)");
+                    P00_Ejectures.Ejecuta_TryCatch2();
+                break;
 
                 case 100: //No se hace nada aqui, pero es necesario colocarlo, 
                 //para que no se imprima algun texto no deseado cuando se desee salir 
