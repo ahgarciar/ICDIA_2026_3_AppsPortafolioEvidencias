@@ -65,6 +65,9 @@ public static void MenuProgramasApuntes()
         Console.WriteLine("4: Clase Dataset");
         Console.WriteLine("5: Try-Catch 1");
         Console.WriteLine("6: Try-Catch 2 (con Message)");
+        Console.WriteLine("7: Try-Catch 3 (con Message)");
+        Console.WriteLine("8: Try-Catch-Finally");
+        Console.WriteLine("9: Try-Parse");
         Console.WriteLine("100: Salir");
         bool esValida = int.TryParse(Console.ReadLine(), out apunte);
             if (!esValida)
@@ -103,6 +106,18 @@ public static void MenuProgramasApuntes()
                 case 6:
                     Console.WriteLine("Ejecución del apunte 6: Try-Catch 2 (con Message)");
                     P00_Ejectures.Ejecuta_TryCatch2();
+                break;
+                case 7:
+                    Console.WriteLine("Ejecución del apunte 7: Try-Catch 3 (con Message)");
+                    P00_Ejectures.Ejecuta_TryCatch3();
+                break;
+                case 8:
+                    Console.WriteLine("Ejecución del apunte 8: Try-Catch-Finally");
+                    P00_Ejectures.Ejecuta_TryCatchFinally();
+                    break;
+                case 9:
+                    Console.WriteLine("Ejecución del apunte 9: Try-Parse");
+                    P00_Ejectures.Ejecuta_EjemploTryParse();            
                 break;
 
                 case 100: //No se hace nada aqui, pero es necesario colocarlo, 

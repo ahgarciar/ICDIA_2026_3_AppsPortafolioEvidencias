@@ -76,4 +76,70 @@ public static void Ejecuta_TryCatch2()
         }
     }
 
+public static void Ejecuta_TryCatch3(){
+        
+        try {   
+            Console.WriteLine("Número: ");
+            int numero = int.Parse(Console.ReadLine()!);
+        }
+        catch (FormatException){ 
+            Console.WriteLine("Formato incorrecto.");
+        }
+        catch (OverflowException){
+            Console.WriteLine("Número demasiado grande.");
+        }
+        catch(Exception ex){
+            Console.WriteLine(ex.Message);
+        }
+    
+}
+
+public static void Ejecuta_TryCatchFinally(){
+        
+        try {   
+            Console.WriteLine("Número: ");
+            int numero = int.Parse(Console.ReadLine()!);
+            Console.WriteLine("El número ingresado es: " + numero);
+        }
+        catch (FormatException){ 
+            Console.WriteLine("Formato incorrecto.");
+        }
+        catch (OverflowException){
+            Console.WriteLine("Número demasiado grande.");
+        }
+        catch(Exception ex){
+            Console.WriteLine(ex.Message);
+        }
+        finally
+        {
+            Console.WriteLine("Ejecución del apunte terminado!!");
+        }
+    
+}
+
+public static void Ejecuta_EjemploTryParse()
+    {
+        try{
+            Console.WriteLine("Edad: ");
+            string entrada = Console.ReadLine();
+            int edad;
+            
+            if (int.TryParse(entrada,out edad)){
+                Console.WriteLine($"Edad válida: {edad}");
+            }
+            else{ 
+                Console.WriteLine("Debe escribir un número entero.");
+                }
+        }
+        catch(Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+        finally
+        {
+            Console.WriteLine("Ejecución del apunte terminado");
+        }
+
+}
+
 }
