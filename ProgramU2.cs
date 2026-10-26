@@ -68,6 +68,9 @@ public static void MenuProgramasApuntes()
         Console.WriteLine("7: Try-Catch 3 (con Message)");
         Console.WriteLine("8: Try-Catch-Finally");
         Console.WriteLine("9: Try-Parse");
+        Console.WriteLine("10: Composición de clases: Computadora");
+        Console.WriteLine("11: Escribir Archivo 1");
+        Console.WriteLine("12: Escribir Archivo 2 - append");
         Console.WriteLine("100: Salir");
         bool esValida = int.TryParse(Console.ReadLine(), out apunte);
             if (!esValida)
@@ -119,6 +122,19 @@ public static void MenuProgramasApuntes()
                     Console.WriteLine("Ejecución del apunte 9: Try-Parse");
                     P00_Ejectures.Ejecuta_EjemploTryParse();            
                 break;
+                case 10:
+                    Console.WriteLine("Ejecución del apunte 10: Composición de clases: Computadora");
+                    P00_Ejectures.Ejecutar_ConstruyeComputadora();            
+                break;
+                case 11:
+                    Console.WriteLine("Ejecución del apunte 11: Escribir Archivo 1");
+                    P00_Ejectures.EscribirArchivo1();            
+                break;
+                case 12:
+                    Console.WriteLine("Ejecución del apunte 12: Escribir Archivo 2");
+                    P00_Ejectures.EscribirArchivo2(true);            
+                break;
+
 
                 case 100: //No se hace nada aqui, pero es necesario colocarlo, 
                 //para que no se imprima algun texto no deseado cuando se desee salir 

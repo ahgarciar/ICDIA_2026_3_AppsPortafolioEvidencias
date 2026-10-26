@@ -1,3 +1,5 @@
+using ICDIA_2026_3_AppsPortafolioEvidencias.Unidad2.ProgsApuntes.DefComputadora;
+
 namespace ICDIA_2026_3_AppsPortafolioEvidencias.Unidad2.ProgsApuntes;
 
 public static class P00_Ejectures
@@ -141,5 +143,46 @@ public static void Ejecuta_EjemploTryParse()
         }
 
 }
+
+public static void Ejecutar_ConstruyeComputadora()
+    {
+        
+        Computadora pc1 = new Computadora("Mi computadora");
+        Console.WriteLine("Computadora creada!");
+
+        DefComputadora.Monitor monitor1 = new DefComputadora.Monitor("LG", 34);
+        DefComputadora.Monitor monitor2 = new DefComputadora.Monitor("Samsung", 27);
+
+        //Computadora usa el monitor 1
+        pc1.MonitorC = monitor1;
+        Console.WriteLine("Computadora conectada al monitor 1");
+
+        //Computadora usa el monitor 2
+        pc1.MonitorC = monitor2;
+        Console.WriteLine("Computadora conectada al monitor 2");
+
+    }
+
+
+public static void EscribirArchivo1()
+    {
+        using StreamWriter streamWriter = new StreamWriter("datos.txt");
+        streamWriter.WriteLine("Felipe");
+        streamWriter.WriteLine("Javier");
+        streamWriter.WriteLine("Diego");
+
+    }
+
+
+
+public static void EscribirArchivo2(bool append)
+    {
+        using StreamWriter streamWriter = new StreamWriter("datos.txt",  append);
+        streamWriter.WriteLine("Felipe");
+        streamWriter.WriteLine("Javier");
+        streamWriter.WriteLine("Diego");
+
+    }
+    
 
 }
