@@ -1,3 +1,4 @@
+using System.Collections;
 using ICDIA_2026_3_AppsPortafolioEvidencias.Unidad2.ProgsApuntes.DefComputadora;
 
 namespace ICDIA_2026_3_AppsPortafolioEvidencias.Unidad2.ProgsApuntes;
@@ -177,12 +178,54 @@ public static void EscribirArchivo1()
 
 public static void EscribirArchivo2(bool append)
     {
+        //                                                 Ruta relativa
         using StreamWriter streamWriter = new StreamWriter("datos.txt",  append);
         streamWriter.WriteLine("Felipe");
         streamWriter.WriteLine("Javier");
         streamWriter.WriteLine("Diego");
 
     }
-    
+
+
+public static List<string> LeerArchivoV1(string nombreArchivo)
+    {
+        List<string> archivo = new List<string>();
+
+        using StreamReader lector = new StreamReader(nombreArchivo);
+        
+        //permite que la variable almacene valores null
+        string? linea;
+        
+        while ((linea = lector.ReadLine()) != null) { //EOF
+             Console.WriteLine(linea);
+             archivo.Add(linea);
+        }        
+
+        return archivo;
+    }
+
+public static void LeerArchivoV2(string nombreArchivo)
+    {
+        List<string> archivo = LeerArchivoV1(nombreArchivo);
+        List<AlumnoCalificacion> alumnos = new List<AlumnoCalificacion>();
+
+        Console.WriteLine("\nArchivo Procesado: ");
+        foreach(string linea in archivo){
+            string[] temp = linea.Split("@");
+
+            string nombre = temp[0].Trim();
+            int calificacion = Convert.ToInt32(temp[1]);
+            
+            AlumnoCalificacion auxiliar = new AlumnoCalificacion(nombre, calificacion);
+            alumnos.Add(auxiliar);
+
+            Console.WriteLine(auxiliar);
+        }
+        Console.WriteLine();
+
+    }
+
+
+
 
 }

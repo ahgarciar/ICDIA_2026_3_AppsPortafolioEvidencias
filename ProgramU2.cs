@@ -71,6 +71,8 @@ public static void MenuProgramasApuntes()
         Console.WriteLine("10: Composición de clases: Computadora");
         Console.WriteLine("11: Escribir Archivo 1");
         Console.WriteLine("12: Escribir Archivo 2 - append");
+        Console.WriteLine("13: Leer Archivo 1 ");
+        Console.WriteLine("14: Leer Archivo 2 ");
         Console.WriteLine("100: Salir");
         bool esValida = int.TryParse(Console.ReadLine(), out apunte);
             if (!esValida)
@@ -134,7 +136,15 @@ public static void MenuProgramasApuntes()
                     Console.WriteLine("Ejecución del apunte 12: Escribir Archivo 2");
                     P00_Ejectures.EscribirArchivo2(true);            
                 break;
-
+                case 13:
+                    Console.WriteLine("Ejecución del apunte 13: Leer Archivo 1");
+                    P00_Ejectures.LeerArchivoV1("datos.txt");                            
+                break;
+                case 14:
+                    Console.WriteLine("Ejecución del apunte 14: Leer Archivo 2");
+                    string nombre = "datos_calificaciones.txt";
+                    P00_Ejectures.LeerArchivoV2(nombre);                            
+                break;
 
                 case 100: //No se hace nada aqui, pero es necesario colocarlo, 
                 //para que no se imprima algun texto no deseado cuando se desee salir 
